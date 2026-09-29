@@ -1,0 +1,5 @@
+<p>
+  <strong>Особистий кабінет:</strong> 
+  <a href="#login-section" id="link-login">Login</a> | 
+  <a href="#register-section" id="link-register">Registration</a>
+</p>
