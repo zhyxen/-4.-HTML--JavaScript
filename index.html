@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USVIDOM — Студія психології та ментального здоров'я в Бучі</title>
+</head>
+<body>
+
+  <!-- Шапка сайту USVIDOM із навігацією та посиланнями на форми -->
+  <header>
+    <h1>USVIDOM</h1>
+    <p>Простір психологічної підтримки, тілесних практик та усвідомленого життя</p>
+
+    <!-- Посилання на форми авторизації та реєстрації  -->
+    <p>
+      <strong>Особистий кабінет:</strong> 
+      <a href="#login-section" id="link-login">Login</a> | 
+      <a href="#register-section" id="link-register">Registration</a>
+    </p>
+    
+    <nav aria-label="Головне меню сайту">
+      <ul>
+        <li><a href="#filters">Підбір терапевта</a></li>
+        <li><a href="#specialists">Наші спеціалісти</a></li>
+        <li><a href="#booking">Запис на прийом</a></li>
+        <li><a href="#auth-section">Вхід / Реєстрація</a></li>
+        <li><a href="#contacts">Локація та контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Головний контент сторінки -->
+  <main>
+
+    <!-- Секція пошуку та фільтрів -->
+    <section id="filters" aria-labelledby="filters-title">
+      <h2 id="filters-title">Підбір терапевта під ваш запит</h2>
+      
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Параметри пошуку</legend>
+
+          <p>
+            <label for="search-input">Пошук за прізвищем або запитом:</label>
+            <input type="search" id="search-input" name="q" placeholder="Наприклад: тривожність, самооцінка, панічні атаки">
+          </p>
+
+          <p>
+            <label for="direction-select">Напрям роботи:</label>
+            <select id="direction-select" name="direction">
+              <option value="">Усі напрями</option>
+              <option value="cbt">Когнітивно-поведінкова терапія (КПТ)</option>
+              <option value="somatic">Тілесно-орієнтована терапія</option>
+              <option value="art">Арттерапія</option>
+              <option value="child">Дитяча та підліткова психологія</option>
+              <option value="gestalt">Гештальт-підхід</option>
+              <option value="family">Парна та сімейна терапія</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="price-filter">Бюджет до (грн / консультація):</label>
+            <input type="number" id="price-filter" name="max_price" min="800" max="3000" step="100">
+          </p>
+
+          <p>
+            <input type="checkbox" id="bucha-offline" name="offline_bucha">
+            <label for="bucha-offline">Тільки офлайн-сесії в студії (м. Буча)</label>
+          </p>
+
+          <button type="submit">Застосувати фільтр</button>
+          <button type="reset">Скинути параметри</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Каталог із 6 карток фахівців USVIDOM -->
+    <section id="specialists" aria-labelledby="specialists-title">
+      <h2 id="specialists-title">Команда терапевтів USVIDOM</h2>
+
+      <ul>
+        <!-- Спеціаліст 1 (КПТ) -->
+        <li>
+          <article class="specialist-card">
+            <h3>Олена Коваль — Психотерапевтка (КПТ)</h3>
+            <img 
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600" 
+              srcset="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400 400w, https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800 800w" 
+              sizes="(max-width: 600px) 100vw, 400px" 
+              alt="Портрет психотерапевтки Олени Коваль" 
+              title="Олена Коваль — КПТ-спеціаліст" 
+              width="400" 
+              height="267"
+              fetchpriority="high">
+            <p><strong>Напрям:</strong> <span>Когнітивно-поведінкова терапія</span></p>
+            <p><strong>Практичний досвід:</strong> <data value="6">6 років</data></p>
+            <p><strong>Вартість сесії:</strong> <data value="1500">1500 грн</data> (50 хв)</p>
+            <p><strong>Найближчий вільний день:</strong> <time datetime="2026-10-02">2 жовтня 2026</time></p>
+            <p><strong>Запити:</strong> Подолання тривожних станів, робота з панічними атаками, перфекціонізм, кризове консультування.</p>
+            <p>
+              <label>
+                <input type="checkbox" name="offline-opt-1" checked> Доступний прийом у Бучі
+              </label>
+            </p>
+            <p>
+              <button type="button">Записатися на прийом до Олени</button>
+            </p>
+          </article>
+        </li>
+
+        <!-- Спеціаліст 2 (Тілесна терапія) -->
+        <li>
+          <article class="specialist-card">
+            <h3>Олександр Мельник — Тілесний терапевт</h3>
+            <img 
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600" 
+              srcset="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400 400w, https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800 800w" 
+              sizes="(max-width: 600px) 100vw, 400px" 
+              alt="Портрет тілесного терапевта Олександра Мельника" 
+              title="Олександр Мельник — тілесні практики" 
+              width="400" 
+              height="267"
+              loading="lazy">
+            <p><strong>Напрям:</strong> <span>Тілесно-орієнтована терапія, соматика</span></p>
+            <p><strong>Практичний досвід:</strong> <data value="5">5 років</data></p>
+            <p><strong>Вартість сесії:</strong> <data value="1700">1700 грн</data> (60 хв)</p>
+            <p><strong>Найближчий вільний день:</strong> <time datetime="2026-10-03">3 жовтня 2026</time></p>
+            <p><strong>Запити:</strong> Хронічний стрес, м'язові спазми, емоційне заніміння, контакт із власним тілом та дихальні практики.</p>
+            <p>
+              <label>
+                <input type="checkbox" name="offline-opt-2" checked> Доступний прийом у Бучі
+              </label>
+            </p>
+            <p>
+              <button type="button">Записатися на прийом до Олександра</button>
+            </p>
+          </article>
+        </li>
+
+        <!-- Спеціаліст 3 (Арттерапія) -->
+        <li>
+          <article class="specialist-card">
+            <h3>Марія Соколова — Арттерапевтка</h3>
+            <img 
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600" 
+              srcset="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400 400w, https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800 800w" 
+              sizes="(max-width: 600px) 100vw, 400px" 
+              alt="Портрет арттерапевтки Марії Соколової" 
+              title="Марія Соколова — арттерапія" 
+              width="400" 
+              height="267"
+              loading="lazy">
+            <p><strong>Напрям:</strong> <span>Арттерапія та метафоричні карти</span></p>
+            <p><strong>Практичний досвід:</strong> <data value="7">7 років</data></p>
+            <p><strong>Вартість сесії:</strong> <data value="1600">1600 грн</data> (60 хв)</p>
+            <p><strong>Найближчий вільний день:</strong> <time datetime="2026-10-04">4 жовтня 2026</time></p>
+            <p><strong>Запити:</strong> Проживання складних почуттів через творчість, вигорання, пошук покликання та повернення енергії.</p>
+            <p>
+              <label>
+                <input type="checkbox" name="offline-opt-3" checked> Доступний прийом у Бучі
+              </label>
+            </p>
+            <p>
+              <button type="button">Записатися на прийом до Марії</button>
+            </p>
+          </article>
+        </li>
+
+        <!-- Спеціаліст 4 (Дитячий психолог) -->
+        <li>
+          <article class="specialist-card">
+            <h3>Тетяна Мороз — Дитяча психологиня</h3>
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600" 
+              srcset="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400 400w, https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800 800w" 
+              sizes="(max-width: 600px) 100vw, 400px" 
+              alt="Портрет дитячої психологині Тетяни Мороз" 
+              title="Тетяна Мороз — дитячий та підлітковий психолог" 
+              width="400" 
+              height="267"
+              loading="lazy">
+            <p><strong>Напрям:</strong> <span>Дитяча та підліткова психологія</span></p>
+            <p><strong>Практичний досвід:</strong> <data value="9">9 років</data></p>
+            <p><strong>Вартість сесії:</strong> <data value="1400">1400 грн</data> (45 хв)</p>
+            <p><strong>Найближчий вільний день:</strong> <time datetime="2026-10-05">5 жовтня 2026</time></p>
+            <p><strong>Запити:</strong> Дитяча тривожність, конфлікти з однолітками, адаптація до школи, налагодження теплого контакту в сім'ї.</p>
+            <p>
+              <label>
+                <input type="checkbox" name="offline-opt-4" checked> Доступний прийом у Бучі
+              </label>
+            </p>
+            <p>
+              <button type="button">Записатися на прийом до Тетяни</button>
+            </p>
+          </article>
+        </li>
+
+        <!-- Спеціаліст 5 (Гештальт) -->
+        <li>
+          <article class="specialist-card">
+            <h3>Дмитро Грищенко — Гештальт-терапевт</h3>
+            <img 
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600" 
+              srcset="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400 400w, https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800 800w" 
+              sizes="(max-width: 600px) 100vw, 400px" 
+              alt="Портрет психолога Дмитра Грищенка" 
+              title="Дмитро Грищенко — гештальт-підхід" 
+              width="400" 
+              height="267"
+              loading="lazy">
+            <p><strong>Напрям:</strong> <span>Гештальт-терапія</span></p>
+            <p><strong>Практичний досвід:</strong> <data value="4">4 роки</data></p>
+            <p><strong>Вартість сесії:</strong> <data value="1500">1500 грн</data> (50 хв)</p>
+            <p><strong>Найближчий вільний день:</strong> <time datetime="2026-10-06">6 жовтня 2026</time></p>
+            <p><strong>Запити:</strong> Усвідомлення власних бажань, встановлення особистих меж, кризові періоди, труднощі вибору.</p>
+            <p>
+              <label>
+                <input type="checkbox" name="offline-opt-5"> Тільки онлайн-сесії
+              </label>
+            </p>
+            <p>
+              <button type="button">Записатися на прийом до Дмитра</button>
+            </p>
+          </article>
+        </li>
+
+        <!-- Спеціаліст 6 (Сімейна терапія) -->
+        <li>
+          <article class="specialist-card">
+            <h3>Катерина Воробей — Сімейна психотерапевтка</h3>
+            <img 
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600" 
+              srcset="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400 400w, https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800 800w" 
+              sizes="(max-width: 600px) 100vw, 400px" 
+              alt="Портрет сімейної терапевтки Катерини Воробей" 
+              title="Катерина Воробей — сімейна терапія" 
+              width="400" 
+              height="267"
+              loading="lazy">
+            <p><strong>Напрям:</strong> <span>Системна сімейна та парна психотерапія</span></p>
+            <p><strong>Практичний досвід:</strong> <data value="11">11 років</data></p>
+            <p><strong>Вартість сесії:</strong> <data value="2300">2300 грн</data> (80 хв)</p>
+            <p><strong>Найближчий вільний день:</strong> <time datetime="2026-10-07">7 жовтня 2026</time></p>
+            <p><strong>Запити:</strong> Кризи у стосунках, непорозуміння між партнерами, екологічне розлучення, відновлення довіри.</p>
+            <p>
+              <label>
+                <input type="checkbox" name="offline-opt-6" checked> Доступний прийом у Бучі
+              </label>
+            </p>
+            <p>
+              <button type="button">Записатися на прийом до Катерини</button>
+            </p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Форма швидкого запису на прийом -->
+    <section id="booking" aria-labelledby="booking-title">
+      <h2 id="booking-title">Запис на первинну консультацію</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Ваші контактні дані для зв'язку</legend>
+          <p>
+            <label for="client-name">Ваше ім'я:</label>
+            <input type="text" id="client-name" name="name" required placeholder="Оксана">
+          </p>
+          <p>
+            <label for="client-phone">Номер телефону:</label>
+            <input type="tel" id="client-phone" name="phone" required placeholder="+38 (097) 123-45-67">
+          </p>
+          <p>
+            <label for="preferred-format">Зручний формат зустрічі:</label>
+            <select id="preferred-format" name="format">
+              <option value="bucha">Офлайн у студії (Буча, вул. Володимира Великого, 1Б)</option>
+              <option value="zoom">Онлайн-сесія (Zoom / Google Meet)</option>
+            </select>
+          </p>
+          <p>
+            <label for="client-note">Коротко про ваш запит (за бажанням):</label>
+            <textarea id="client-note" name="note" rows="3" cols="30" placeholder="Що саме вас зараз турбує?"></textarea>
+          </p>
+          <button type="submit">Надіслати заявку на запис</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- СЕКЦІЯ ЛАБОРАТОРНОЇ РОБОТИ №4: ВХІД ТА РЕЄСТРАЦІЯ -->
+    <section id="auth-section" aria-labelledby="auth-main-title">
+      <h2 id="auth-main-title">Кабінет клієнта простору USVIDOM</h2>
+
+      <!-- 1. ФОРМА АВТОРИЗАЦІЇ (LOGIN) -->
+      <section id="login-section" aria-labelledby="login-title">
+        <h3 id="login-title">Авторизація клієнта (Login)</h3>
+        
+        <form id="form-login" action="#" method="post">
+          <fieldset>
+            <legend>Вхід до особистого простору</legend>
+
+            <!-- Приховане поле (hidden) -->
+            <input type="hidden" name="action_type" value="user_login">
+
+            <p>
+              <label for="login-email">Електронна пошта (Email):</label>
+              <input type="email" id="login-email" name="email" required placeholder="client@usvidom.ua" autocomplete="email">
+            </p>
+
+            <p>
+              <label for="login-pass">Пароль:</label>
+              <input type="password" id="login-pass" name="password" required minlength="6" placeholder="Введіть ваш пароль">
+            </p>
+
+            <p>
+              <label>
+                <input type="checkbox" name="remember" checked> Запам'ятати мене на цьому пристрої
+              </label>
+            </p>
+
+            <p>
+              <button type="submit">Увійти</button>
+              <button type="reset">Очистити</button>
+            </p>
+          </fieldset>
+        </form>
+        <p id="login-status-msg" aria-live="polite"></p>
+      </section>
+
+      <hr>
+
+      <!-- 2. ФОРМА РЕЄСТРАЦІЇ (REGISTRATION) З УСІМА ВИМОГАМИ ЗАВДАННЯ -->
+      <section id="register-section" aria-labelledby="reg-title">
+        <h3 id="reg-title">Реєстрація нового клієнта (Registration)</h3>
+        
+        <form id="form-register" action="#" method="post">
+          <fieldset>
+            <legend>Анкета первинного знайомства</legend>
+
+            <!-- Однорядкове текстове поле (ПІБ) -->
+            <p>
+              <label for="reg-name">Ваше повне ім'я (ПІБ):</label>
+              <input type="text" id="reg-name" name="fullname" required minlength="2" placeholder="Олена Мельник">
+            </p>
+
+            <!-- Однорядкове поле Email -->
+            <p>
+              <label for="reg-email">Електронна адреса:</label>
+              <input type="email" id="reg-email" name="email" required placeholder="your.mail@gmail.com">
+            </p>
+
+            <!-- Однорядкове поле Телефон із шаблоном pattern -->
+            <p>
+              <label for="reg-phone">Контактний телефон:</label>
+              <input type="tel" id="reg-phone" name="phone" required pattern="^\+?[0-9]{10,13}$" placeholder="+380XXXXXXXXX" title="Введіть номер у форматі +380XXXXXXXXX">
+            </p>
+
+            <!-- Поле створення паролю -->
+            <p>
+              <label for="reg-password">Створіть надійний пароль:</label>
+              <input type="password" id="reg-password" name="password" required minlength="8" placeholder="Не менше 8 символів">
+            </p>
+
+            <!-- Дата (Дата народження) -->
+            <p>
+              <label for="reg-dob">Дата народження:</label>
+              <input type="date" id="reg-dob" name="birthdate" required min="1930-01-01" max="2012-12-31">
+            </p>
+
+            <!-- Випадаючий список (Напрям терапії) -->
+            <p>
+              <label for="reg-direction">Оберіть пріоритетний напрям:</label>
+              <select id="reg-direction" name="therapy_direction" required>
+                <option value="" disabled selected>Виберіть варіант зі списку...</option>
+                <option value="cbt">Когнітивно-поведінкова терапія (КПТ)</option>
+                <option value="somatic">Тілесно-орієнтовані практики</option>
+                <option value="art">Арттерапія та творче вираження</option>
+                <option value="child">Дитяча та підліткова психологія</option>
+                <option value="gestalt">Гештальт-підхід</option>
+                <option value="family">Сімейні та парні консультації</option>
+              </select>
+            </p>
+
+            <!-- Радіобатони (Формат зустрічей) -->
+            <fieldset>
+              <legend>Бажаний формат проведення терапії:</legend>
+              <p>
+                <input type="radio" id="format-bucha" name="session_format" value="offline" checked>
+                <label for="format-bucha">Офлайн у затишному просторі студії (м. Буча, вул. Володимира Великого, 1Б)</label>
+              </p>
+              <p>
+                <input type="radio" id="format-online" name="session_format" value="online">
+                <label for="format-online">Дистанційно (Zoom / Google Meet)</label>
+              </p>
+            </fieldset>
+
+            <!-- Багаторядкове текстове поле (Textarea) -->
+            <p>
+              <label for="reg-notes">Коротко опишіть ваш поточний стан або запит:</label><br>
+              <textarea id="reg-notes" name="notes" rows="4" cols="50" placeholder="Наприклад: відчуваю вигорання на роботі, постійну тривогу, складно будувати стосунки..."></textarea>
+            </p>
+
+            <!-- Чекбокси -->
+            <p>
+              <label>
+                <input type="checkbox" id="reg-consent" name="consent" required> Я погоджуюся на збереження та обробку персональних даних у системі студії USVIDOM *
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="newsletter" checked> Бажаю отримувати щотижневі практики усвідомленості та анонси подій студії
+              </label>
+            </p>
+
+            <!-- Кнопки відправки та очищення -->
+            <p>
+              <button type="submit">Зареєструватися</button>
+              <button type="reset">Очистити форму</button>
+            </p>
+          </fieldset>
+        </form>
+        <p id="reg-status-msg" aria-live="polite"></p>
+      </section>
+    </section>
+
+    <!-- Додаткова інформація про простір -->
+    <aside aria-labelledby="about-bucha-title">
+      <h2 id="about-bucha-title">Простір турботи та усвідомленості</h2>
+      <blockquote>
+        <p>«Усвідомлення — це перший і найголовніший крок до внутрішньої свободи та зцілення.»</p>
+      </blockquote>
+      <p>У студії <strong>USVIDOM</strong> у Бучі створено спокійний, конфіденційний простір для індивідуальної, дитячої, тілесної та групової терапії.</p>
+    </aside>
+
+  </main>
+
+  <!-- Підвал сайту -->
+  <footer id="contacts">
+    <h2>Контакти та локація студії USVIDOM</h2>
+    <address>
+      <p><strong>Адреса студії:</strong> Україна, Київська обл., м. Буча, вул. Володимира Великого, 1Б</p>
+      <p><strong>Онлайн-прийом:</strong> сесії через Zoom або Google Meet по всьому світу</p>
+      <p><strong>Телефон для довідок та запису:</strong> <a href="tel:+380671234567">+38 (067) 123-45-67</a></p>
+      <p><strong>Email для звернень:</strong> <a href="mailto:hello@usvidom.ua">hello@usvidom.ua</a></p>
+    </address>
+    <p>&copy; <time datetime="2026">2026</time> USVIDOM. Усі права захищено.</p>
+  </footer>
+
+  <!-- БАЗОВИЙ JAVASCRIPT ДЛЯ ВЗАЄМОДІЇ З ФОРМАМИ (вимога ЛР4) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 1. Плавна навігація до форм при натисканні на Login / Registration у шапці
+      const linkLogin = document.getElementById('link-login');
+      const linkRegister = document.getElementById('link-register');
+      const loginSection = document.getElementById('login-section');
+      const registerSection = document.getElementById('register-section');
+
+      linkLogin.addEventListener('click', function (event) {
+        event.preventDefault();
+        loginSection.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('login-email').focus();
+      });
+
+      linkRegister.addEventListener('click', function (event) {
+        event.preventDefault();
+        registerSection.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('reg-name').focus();
+      });
+
+      // 2. Обробка форми Входу (Login)
+      const formLogin = document.getElementById('form-login');
+      const loginMsg = document.getElementById('login-status-msg');
+
+      formLogin.addEventListener('submit', function (event) {
+        event.preventDefault(); // Запобігає перезавантаженню вебсторінки
+        const email = document.getElementById('login-email').value;
+
+        loginMsg.textContent = `Успішний вхід! Раді знову вітати вас у системі USVIDOM (${email}).`;
+        loginMsg.style.color = 'green';
+        loginMsg.style.fontWeight = 'bold';
+      });
+
+      // 3. Обробка форми Реєстрації (Registration)
+      const formRegister = document.getElementById('form-register');
+      const regMsg = document.getElementById('reg-status-msg');
+
+      formRegister.addEventListener('submit', function (event) {
+        event.preventDefault(); // Зупиняємо стандартну відправку
+
+        const name = document.getElementById('reg-name').value;
+        const dirSelect = document.getElementById('reg-direction');
+        const chosenDir = dirSelect.options[dirSelect.selectedIndex].text;
+        const formatValue = document.querySelector('input[name="session_format"]:checked').value;
+        const formatString = formatValue === 'offline' ? 'офлайн у Бучі' : 'онлайн';
+
+        // Демонстрація взаємодії через DOM: виведення персоналізованого тексту
+        regMsg.innerHTML = `<strong>Вітаємо у спільноті USVIDOM, ${name}!</strong><br>` +
+          `Анкету прийнято. Обраний напрям: <em>${chosenDir}</em> (${formatString}). Очікуйте повідомлення координатора.`;
+        regMsg.style.color = 'green';
+
+        // Очищення форми після успішної відправки
+        formRegister.reset();
+      });
+    });
+  </script>
+
+</body>
+</html>
