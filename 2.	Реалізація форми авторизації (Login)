@@ -1,0 +1,7 @@
+            Створено секцію #login-section, що містить:
+•	Приховане поле <input type="hidden"> для передачі типу операції.
+•	Текстове поле електронної пошти <input type="email"> з атрибутами required, placeholder та autocomplete="email".
+•	Поле пароля <input type="password"> з контролем мінімальної довжини minlength="6".
+•	Чекбокс <input type="checkbox"> із встановленим за замовчуванням атрибутом checked.
+•	Кнопки <button type="submit"> та <button type="reset">.
+
